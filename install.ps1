@@ -22,3 +22,6 @@ Expand-Archive -Path $zipPath -DestinationPath $dir -Force
 Remove-Item $zipPath
 
 Write-Host "✅ Done!"
+
+Write-Host "Type cd Risto" -ForegroundColor Yellow
+Write-Host "Type ./run-risto-test or ./run-risto-build" -ForegroundColor Yellow

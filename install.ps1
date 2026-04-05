@@ -1,0 +1,32 @@
+$ErrorActionPreference = "Stop"
+
+Write-Host "🚀 Installing Risto..." -ForegroundColor Cyan
+
+# Current directory
+$dir = Get-Location
+
+# Download URL
+$url = "https://github.com/infinityinquire/Risto/releases/download/python/Risto.zip"
+
+$zipPath = "$dir\Risto.zip"
+
+# Step 1: Download
+Write-Host "📥 Downloading project..."
+Invoke-WebRequest -Uri $url -OutFile $zipPath
+
+# Step 2: Extract
+Write-Host "📂 Extracting files..."
+Expand-Archive -Path $zipPath -DestinationPath $dir -Force
+
+# Step 3: Remove zip
+Remove-Item $zipPath
+
+Write-Host "✅ Done!"
+
+# Step 4: Run app (optional)
+if (Test-Path "$dir\main.py") {
+    Write-Host "▶ Launching app..."
+    python main.py
+} else {
+    Write-Host "⚠ main.py not found"
+}

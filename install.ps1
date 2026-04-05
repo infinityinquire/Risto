@@ -22,11 +22,3 @@ Expand-Archive -Path $zipPath -DestinationPath $dir -Force
 Remove-Item $zipPath
 
 Write-Host "✅ Done!"
-
-# Step 4: Run app (optional)
-if (Test-Path "$dir\main.py") {
-    Write-Host "▶ Launching app..."
-    python main.py
-} else {
-    Write-Host "⚠ main.py not found"
-}

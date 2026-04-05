@@ -23,5 +23,7 @@ Remove-Item $zipPath
 
 Write-Host "✅ Done!"
 
-Write-Host "Type cd Risto" -ForegroundColor Yellow
-Write-Host "Type ./run-risto-test or ./run-risto-build" -ForegroundColor Yellow
+Write-Host "Run the following commands"
+Write-Host "cd Risto" -ForegroundColor Yellow
+Write-Host "./run-risto-test for testing." -ForegroundColor Yellow
+Write-Host "./run-risto-build for building." -ForegroundColor Yellow

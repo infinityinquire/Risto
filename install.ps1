@@ -6,7 +6,7 @@ Write-Host "🚀 Installing Risto..." -ForegroundColor Cyan
 $dir = Get-Location
 
 # Download URL
-$url = "https://raw.githubusercontent.com/infinityinquire/Risto/main/Risto.zip"
+$url = "https://github.com/infinityinquire/Risto/releases/latest/download/Risto.zip"
 
 $zipPath = "$dir\Risto.zip"
 
